@@ -19,13 +19,13 @@ public class LotListAveragePriceController {
     	else if (averageBy.toLowerCase().equals("brand")) {
     		avgPrice = Lot.getAveragePriceByBrand();
     	}
-    	if (averageBy.toLowerCase().equals("color")) {
+    	else if (averageBy.toLowerCase().equals("color")) {
     		avgPrice = Lot.getAveragePriceByColor();
     	}
-    	if (averageBy.toLowerCase().equals("enginetype")) {
+    	else if (averageBy.toLowerCase().equals("enginetype")) {
     		avgPrice = Lot.getAveragePriceByEngineType();
     	}
-    	if (averageBy.toLowerCase().equals("year")) {
+    	else if (averageBy.toLowerCase().equals("year")) {
     		avgPrice = Lot.getAveragePriceByYear();
     	}
     	Collections.sort(avgPrice);
