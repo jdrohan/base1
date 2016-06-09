@@ -13,20 +13,21 @@ public class LotListAveragePriceController {
     @RequestMapping("/LotListAveragePrice")
     public ArrayList<Vehicle> lotListAveragePrice(@RequestParam(value="averageBy", defaultValue="type") String averageBy) {
     	ArrayList<Vehicle> avgPrice = new ArrayList<Vehicle>();
+    	VehicleAverageManager vam = new VehicleAverageManager(Lot.LOT_LIST);
     	if (averageBy.toLowerCase().equals("type")) {
-    		avgPrice = Lot.getAveragePriceByType();
+    		avgPrice = vam.getAveragePriceByType();
     	}
     	else if (averageBy.toLowerCase().equals("brand")) {
-    		avgPrice = Lot.getAveragePriceByBrand();
+    		avgPrice = vam.getAveragePriceByBrand();
     	}
     	else if (averageBy.toLowerCase().equals("color")) {
-    		avgPrice = Lot.getAveragePriceByColor();
+    		avgPrice = vam.getAveragePriceByColor();
     	}
     	else if (averageBy.toLowerCase().equals("enginetype")) {
-    		avgPrice = Lot.getAveragePriceByEngineType();
+    		avgPrice = vam.getAveragePriceByEngineType();
     	}
     	else if (averageBy.toLowerCase().equals("year")) {
-    		avgPrice = Lot.getAveragePriceByYear();
+    		avgPrice = vam.getAveragePriceByYear();
     	}
     	Collections.sort(avgPrice);
     	return avgPrice;

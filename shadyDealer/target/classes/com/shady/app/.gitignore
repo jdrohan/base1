@@ -3,3 +3,9 @@
 /LotListByPriceController.class
 /ShadyDealerApplication.class
 /Vehicle.class
+/Lot_FW.class
+/Vehicle_FW.class
+/VehicleManager.class
+/VehicleOptionManager.class
+/VehicleAverageManager.class
+/VehicleAttributeManager.class
